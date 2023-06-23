@@ -9,7 +9,7 @@ jobs:
     build-and-test:
         docker:
             - image: cimg/node:12.16
-        parallelism: 5
+
         steps:
             - run: echo "hello world"
             - checkout
