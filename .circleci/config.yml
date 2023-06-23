@@ -11,7 +11,7 @@ jobs:
             - image: cimg/node:12.16
 
         steps:
-            - run: echo "hello world"
+
             - checkout
             - node/install-packages:
                 pkg-manager: yarn      
@@ -28,8 +28,11 @@ jobs:
                 path: ~/junit
             - store_artifacts:
                 path: ~/junit
-            - run: echo "bye world"    
+
 workflows:
     build-and-test:
       jobs:
-        - build-and-test
+        - build-and-test: 
+              post-steps:
+                - run:
+                    command: echo "Hello world"
