@@ -2,7 +2,8 @@ import { subtract } from '../math';
 
 describe('Subtraction testing', () => {
       test('4 - 1 = 3', () => {
-        expect(subtract(4, 1)).toBe(3);
+        // expect(subtract(4, 1)).toBe(3);
+        expect(subtract(4, 1)).toBe(8);            
       });
 
       test('6 - 1 = 5', () => {
